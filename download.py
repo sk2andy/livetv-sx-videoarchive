@@ -20,7 +20,7 @@ for tuplee in tuples:
     else:
     	if(currentGame==True):
     		print "Please Wait until the download is going on..."
-    		videosite=urllib2.urlopen("http://livetv.sx"+tuplee[1]).read
+    		videosite=urllib2.urlopen("http://livetv.sx"+tuplee[1]).read()
     		iframe = re.search(r'http[s]??://vk.com/video_ext.php\?[&;\w\d=-]*',videosite).group(0)
     		videoiframe=urllib2.urlopen(iframe).read()
     		urls = re.findall(r'http[s]??://[\w\d./]*.mp4',videoiframe)
